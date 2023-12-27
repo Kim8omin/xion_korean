@@ -65,7 +65,7 @@ const ContactCompoWrap = styled.div`
   background-color: #231e20;
   gap: 25px;
   padding: 20px;
-  margin: 50px;
+  margin: 80px;
   height: 300px;
 
   #contactTitle {
@@ -73,6 +73,7 @@ const ContactCompoWrap = styled.div`
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
+    line-height: 1.3;
   }
 `;
 
@@ -87,6 +88,7 @@ const ContactWrapper = styled.div`
   flex-direction: column; /* Change to column for smaller screens */
   align-items: center;
   margin-bottom: 20px;
+  gap:8px;
 
   @media screen and (min-width: 430px) {
     flex-direction: row; /* Change back to row for larger screens */
@@ -97,6 +99,7 @@ const ContactInfo = styled.div`
   display: flex;
   align-items: center;
   margin-right: 20px;
+  
 
   img {
     width: 20px;
@@ -106,6 +109,7 @@ const ContactInfo = styled.div`
   p {
     color: white;
     font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.3;
   }
 `;
 
@@ -132,12 +136,13 @@ const LocationInfo = styled.div`
 
   h6 {
     color: white;
-
+    line-height: 1.5;
   }
 
   p {
     color: white;
     font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.2;
   }
 `;
 
