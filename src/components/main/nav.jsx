@@ -8,7 +8,11 @@ const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
   const onToggle = () => {
-    setToggle(true);
+    if (!toggle) {
+      setToggle(true);
+    } else {
+      setToggle(false);
+    }
   };
 
   return (
@@ -27,7 +31,12 @@ const Nav = () => {
       </MediaQuery>
       <MediaQuery maxWidth={430}>
         <MobileLayer>
-          <img src={hamburger} alt="hamburger" onClick={onToggle} width='30px'/>
+          <img
+            src={hamburger}
+            alt="hamburger"
+            onClick={onToggle}
+            width="30px"
+          />
 
           {toggle && (
             <NavWrapped>
@@ -90,8 +99,7 @@ const NavText = styled.h4`
 `;
 
 const MobileLayer = styled.div`
-  display:flex;
-  
+  display: flex;
 `;
 
 const NavWrapped = styled.div`

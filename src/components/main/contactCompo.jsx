@@ -65,10 +65,14 @@ const ContactCompoWrap = styled.div`
   background-color: #231e20;
   gap: 25px;
   padding: 20px;
-  margin: 80px;
+  margin: 70px;
   height: 300px;
 
   #contactTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-size: 24px;
     text-align: center;

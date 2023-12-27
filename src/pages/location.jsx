@@ -7,8 +7,8 @@ import styled from 'styled-components';
 const Location = () => {
     return (
         <LocationLayer>
-        <h4 style={{color:'white', fontSize:'20px', marginLeft: '30px'}}>찾아오시는 길</h4>
-        <p style={{color:'white', marginLeft: '30px', lineHeight: '1.4'}}>서울시 광진구 광나루로 43길 83, 101호 (구의동 222-5) 우편번호 05041</p>
+        <h4 style={{color:'white', fontSize:'20px', marginLeft: '20px'}}>찾아오시는 길</h4>
+        <p style={{color:'white', marginLeft: '20px', lineHeight: '1.4'}}>서울시 광진구 광나루로 43길 83, 101호 (구의동 222-5) 우편번호 05041</p>
         <LocationWrapper>
         <KakaoLocation/>
         <img src={contact} alt='location' width='600px'/>
