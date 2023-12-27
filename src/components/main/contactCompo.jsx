@@ -3,21 +3,29 @@ import styled from "styled-components";
 import phone from "../../assets/phone.png";
 import location from "../../assets/location.png";
 import envelop from "../../assets/envelop.png";
+import kakao from "../../assets/kakao.png";
 
 const ContactComponent = () => {
   return (
     <ContactCompoWrap>
-      <h6 id="contactTitle">Initiate your ideas with our expertise</h6>
+      <h6 id="contactTitle">
+        당신의 디자인에 <br />
+        날개를 달아드립니다
+      </h6>
       <ContactLayer>
         <ContactWrapper>
           <ContactInfo>
             <Icon src={phone} alt="phone" />
             <div>
-              <p>+82-10-9460-5101</p>
-              <p>+82-2-6408-6834</p>
+              <p>010-9460-5101</p>
+              <p>02-6408-6834</p>
             </div>
           </ContactInfo>
           <ContactInfo>
+            <Icon src={kakao} alt="kakao" />
+            <p>xion_</p>
+          </ContactInfo>
+            <ContactInfo>
             <Icon src={envelop} alt="envelop" />
             <p>x-ion@naver.com</p>
           </ContactInfo>
@@ -27,10 +35,10 @@ const ContactComponent = () => {
           <LocationInfo>
             <Icon src={location} alt="location" />
             <div>
-              <h6>Seoul office</h6>
+              <h6>서울 사무실</h6>
               <p>
-                Unit #101, 83 Gwangnaru-ro 40-gil, Gwangjin-gu, Seoul, South
-                Korea
+                서울시 광진구 광나루로 43길 83, 101호 (구의동 222-5) 우편번호
+                05041
               </p>
             </div>
           </LocationInfo>
@@ -38,11 +46,8 @@ const ContactComponent = () => {
           <LocationInfo className="global">
             <Icon src={location} alt="location" />
             <div>
-              <h6>Guangzhou branch office</h6>
-              <p>
-                Unit #212, Seongpung Building, Samwon-ri, Baiyun-gu, Guangzhou,
-                Guangdong Province, China
-              </p>
+              <h6>광저우 지사</h6>
+              <p>중국 광동성 광저우시 백운구 삼원리 성풍빌딩, 212호</p>
             </div>
           </LocationInfo>
         </AddressLayer>
@@ -69,7 +74,6 @@ const ContactCompoWrap = styled.div`
     text-align: center;
     margin-bottom: 20px;
   }
-
 `;
 
 const ContactLayer = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import insta from "../../assets/insta.png";
 import kakao from "../../assets/kakao.png";
+import {Link} from "react-router-dom"
 
 const Sns = () => {
   return (
@@ -11,9 +12,9 @@ const Sns = () => {
           <a href="https://www.instagram.com/chelseaion_/">
             <img id="insta" src={insta} alt="instagram" />
           </a>
-          <a href="#">
+          <Link to='/contact'>
             <img id="kakao" src={kakao} alt="kakao" width='10px'/>
-          </a>
+          </Link>
         </div>
       </SnsContent>
     </SnsLayer>
