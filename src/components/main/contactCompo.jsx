@@ -70,7 +70,7 @@ const ContactCompoWrap = styled.div`
 
   #contactTitle {
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -132,6 +132,7 @@ const LocationInfo = styled.div`
 
   h6 {
     color: white;
+
   }
 
   p {
