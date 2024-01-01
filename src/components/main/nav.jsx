@@ -8,12 +8,8 @@ const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
   const onToggle = () => {
-    if (!toggle) {
-      setToggle(true);
-    } else {
-      setToggle(false);
-    }
-  };
+    setToggle(!toggle);
+    };
 
   return (
     <NavContainer>
@@ -30,35 +26,48 @@ const Nav = () => {
         </span>
       </MediaQuery>
       <MediaQuery maxWidth={430}>
-        <MobileLayer>
+        <MobileLayer toggle={toggle}>
           <img
             src={hamburger}
             alt="hamburger"
             onClick={onToggle}
             width="30px"
           />
-
+          </MobileLayer>
+          {toggle && <Overlay onClick={onToggle}/>}
           {toggle && (
             <NavWrapped>
+              <div className="division-line"></div>
               <span>
-                <NavLink to={"/contact"}>
+                <NavLink to={"/contact"} onClick={onToggle}>
                   <NavText>Contact</NavText>
                 </NavLink>
               </span>
+              <div className="division-line"></div>
               <span>
-                <NavLink to={"/location"}>
+                <NavLink to={"/location"} onClick={onToggle}>
                   <NavText>Location</NavText>
                 </NavLink>
               </span>
+              <div className="division-line"></div>
             </NavWrapped>
           )}
-        </MobileLayer>
       </MediaQuery>
     </NavContainer>
   );
 };
 
 export default Nav;
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+`;
 
 const NavWrapper = styled.div`
   /* Your styles for NavWrapper */
@@ -99,12 +108,22 @@ const NavText = styled.h4`
 `;
 
 const MobileLayer = styled.div`
-  display: flex;
+  display: ${({toggle})=>(toggle? "none":"flex")};
 `;
 
 const NavWrapped = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  color: yellow;
+position: absolute; 
+top: 100%; 
+left: 0; 
+flex-direction: column;
+width: 100%;
+background-color: black;
+color: white;
+text-align:center;
+line-height: 3;
+
+.division-line {
+  border-top: 1px solid #444444;
+  
+}
 `;
