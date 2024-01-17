@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import RouteChangeTracker from './AnalyTracker';
 import Layout from "./components/main/layout";
 import Contact from "./pages/contact";
 import Location from "./pages/location";
@@ -13,9 +14,11 @@ import Error from "./pages/error";
 
 
 function App() {
+  RouteChangeTracker();
+  
   return (
     <div className="app-container">
-    <Router>
+    {/*<Router>*/}
       <Suspense fallback={<div>loading</div>}>
         <Routes>
           <Route
@@ -31,7 +34,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Suspense>
-    </Router>
+    {/*</Router>*/}
     </div>
   );
 }
